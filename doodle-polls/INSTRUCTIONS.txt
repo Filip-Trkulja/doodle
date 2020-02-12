@@ -2,8 +2,10 @@ For building appropriate images and running containers please follow these steps
 
 In project root directory run these instructions:
 
-1* docker-compose build
-
-2* docker-compose up
+1* mvn clean install
+2* docker-compose build
+3* docker-compose up
 
 Application will be started and you can check that hitting URL: http://localhost:8080/api/polls
+
+(I have problems with sending jar files to GitHub and just because of that first instruction is also needed, to generate .JAR file in target file)
