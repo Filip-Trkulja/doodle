@@ -1,0 +1,29 @@
+version: "3"
+services:
+  mongo:
+    image: mongo:3.6
+    ports:
+    - 27000:27017
+    container_name: mongo
+    restart: on-failure
+
+  mongo-init:
+    build: ./mongo-init
+    links:
+      - mongo
+    depends_on:
+    - mongo
+
+# APP  ***********************
+  doodle-polls:
+    build: .
+    ports:
+    - 8080:8080
+    links:
+    - mongo
+    entrypoint: "java -Dspring.data.mongodb.uri=mongodb://mongo/test -Djava.security.egd=file:/dev/./urandom -jar app.jar"
+    depends_on:
+    - mongo
+    - mongo-init
+    container_name: doodle-polls
+    restart: on-failure

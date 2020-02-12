@@ -1,0 +1,9 @@
+For building appropriate images and running containers please follow these steps:
+
+In project root directory run these instructions:
+
+1* docker-compose build
+
+2* docker-compose up
+
+Application will be started and you can check that hitting URL: http://localhost:8080/api/polls
