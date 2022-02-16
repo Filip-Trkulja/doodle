@@ -1,3 +1,4 @@
 # doodle
 
-1. Uspesno instalira Git
+1. Uspesno instaliran Git
+2. Instaliran GitExtensions
