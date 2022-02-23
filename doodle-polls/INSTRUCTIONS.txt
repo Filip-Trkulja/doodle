@@ -1,6 +1,6 @@
 For building appropriate images and running containers please follow these steps:
 
-In project root directory run these instructions:
+In project root directory run these instructions: Filipove instrukcije :
 
 1* mvn clean install
 2* docker-compose build
